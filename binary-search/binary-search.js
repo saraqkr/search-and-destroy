@@ -1,27 +1,27 @@
 'use strict';
 
 // Complete this algo
-// const binarySearch = (array, target, firstIdx = 0, lastIdx = array.length) => {
-// 	// len = 10 --> lastIdx = 9 --> centerIdx = 4
-// 	// len = 9 --> lastIdx = 8 --> centerIdx = 4
+const binarySearch = (array, target, firstIdx = 0, lastIdx = array.length) => {
+	// len = 10 --> lastIdx = 9 --> centerIdx = 4
+	// len = 9 --> lastIdx = 8 --> centerIdx = 4
 
-// 	let center = Math.floor((firstIdx + lastIdx)/2)	// 12(6) -> 18(9) -> 19(10) -> 20(11)
+	let center = Math.floor((firstIdx + lastIdx)/2)	// 12(6) -> 18(9) -> 19(10) -> 20(11)
 
-// 	// if (target < array[0] || target > array[array.length - 1]) return false
-// 	if (lastIdx < firstIdx) return false
+	// if (target < array[0] || target > array[array.length - 1]) return false
+	if (lastIdx < firstIdx) return false
 
-// // const test1 = [1,3,4,5,10,15,20,22,23,98,1000];
-// // target = 10
+// const test1 = [1,3,4,5,10,15,20,22,23,98,1000];
+// target = 10
 
-// 	if (target === array[center]) return true
-// 	else if (array[center] > target) {
-// 		lastIdx = center - 1		// 4
-// 		return binarySearch(array, target, firstIdx, lastIdx)
-// 	} else {
-// 		firstIdx = center + 1		// firstIdx = 12
-// 		return binarySearch(array, target, firstIdx, lastIdx)
-// 	}
-// }
+	if (target === array[center]) return true
+	else if (array[center] > target) {
+		lastIdx = center - 1		// 4
+		return binarySearch(array, target, firstIdx, lastIdx)
+	} else {
+		firstIdx = center + 1		// firstIdx = 12
+		return binarySearch(array, target, firstIdx, lastIdx)
+	}
+}
 
 const binarySearch = (array, target) => {
 	let startIdx = 0;
